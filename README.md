@@ -1,13 +1,20 @@
 # Task-1
 API integration and Data visualization
+<br>
 import requests
+<br>
 import matplotlib.pyplot as plt
+<br>
 import pandas as pd
+<br>
 
 # Replace with your OpenWeatherMap API key
 API_KEY = 'YOUR_API_KEY'
+<br>
 CITY = 'London' # Example city
+<br>
 UNITS = 'metric' # or 'imperial'
+<br>
 
 def fetch_weather_data(city, api_key, units):
     """Fetches current weather data for a given city."""
