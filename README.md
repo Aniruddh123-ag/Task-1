@@ -17,12 +17,19 @@ UNITS = 'metric' # or 'imperial'
 <br>
 
 def fetch_weather_data(city, api_key, units):
+<br>
     """Fetches current weather data for a given city."""
+    <br>
     base_url = "http://api.openweathermap.org/data/2.5/weather?"
+    <br>
     complete_url = f"{base_url}q={city}&appid={api_key}&units={units}"
+    <br>
     response = requests.get(complete_url)
+    <br>
     data = response.json()
+    <br>
     return data
+    <br>
 
 def create_visualization(weather_data):
     """Creates a simple visualization of temperature."""
