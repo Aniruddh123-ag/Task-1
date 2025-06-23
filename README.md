@@ -33,14 +33,20 @@ def fetch_weather_data(city, api_key, units):
 
 def create_visualization(weather_data):
     """Creates a simple visualization of temperature."""
+    <br>
     if weather_data and weather_data.get('main'):
+    <br>
         temp = weather_data['main']['temp']
+        <br>
         feels_like = weather_data['main']['feels_like']
+        <br>
         humidity = weather_data['main']['humidity']
+        <br>
 
         data = {'Metric': ['Temperature (°C)', 'Feels Like (°C)', 'Humidity (%)'],
                 'Value': [temp, feels_like, humidity]}
         df = pd.DataFrame(data)
+        <br>
 
         fig, ax = plt.subplots(figsize=(8, 6))
         ax.bar(df['Metric'], df['Value'], color=['skyblue', 'lightcoral', 'lightgreen'])
@@ -52,9 +58,15 @@ def create_visualization(weather_data):
         print("Could not retrieve weather data or invalid data format.")
 
 if _name_ == "_main_":
+<br>
     weather_data = fetch_weather_data(CITY, API_KEY, UNITS)
+    <br>
     if weather_data:
+    <br>
         print(f"Fetched weather data for {CITY}: {weather_data}")
+        <br>
         create_visualization(weather_data)
+        <br>
     else:
+    <br>
         print("Failed to fetch weather data.")
