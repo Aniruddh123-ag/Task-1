@@ -1,6 +1,7 @@
 # Task-1
 API integration and Data visualization
 <br>
+
 import requests
 <br>
 import matplotlib.pyplot as plt
